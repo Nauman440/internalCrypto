@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const NavbarStyles = styled.nav`
   .logo {
@@ -54,7 +54,7 @@ const NavbarStyles = styled.nav`
     color: #132b50;
   }
 
-  ${({ theme: { down, breakpoints } }) => down(breakpoints.lg)} {
+  ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
     .desktop-menu {
       display: none;
     }
@@ -62,6 +62,6 @@ const NavbarStyles = styled.nav`
       display: block;
     }
   }
-`;
+`
 
-export default NavbarStyles;
+export default NavbarStyles
