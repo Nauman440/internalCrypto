@@ -1,0 +1,49 @@
+import styled from "styled-components";
+
+const StyledSection = styled.section`
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+  }
+
+  .btn-subscribe {
+    width: 221px;
+    height: 70px;
+    background: #940e88;
+    border-radius: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+  }
+
+  h1 {
+    width: 75%;
+    font-weight: 400;
+    font-size: 72px;
+    line-height: 85px;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
+    h1 {
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
+  ${({ theme: { down, breakpoints } }) => down(breakpoints.sm)} {
+    h1 {
+      width: 90%;
+      font-size: 40px;
+      line-height: 47px;
+    }
+  }
+`;
+export default StyledSection;
