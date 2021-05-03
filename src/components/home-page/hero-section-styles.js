@@ -1,13 +1,11 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const StyledSection = styled.section`
-  .hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 6rem;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 
   .btn-subscribe {
     width: 221px;
@@ -24,12 +22,19 @@ const StyledSection = styled.section`
   }
 
   h1 {
-    width: 75%;
+    width: 900px;
     font-weight: 400;
     font-size: 72px;
     line-height: 85px;
     text-align: center;
     color: #ffffff;
+  }
+
+  ${({ theme: { down, breakpoints } }) => down(breakpoints.lg)} {
+    h1 {
+      width: 90%;
+      font-size: 62px;
+    }
   }
 
   ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
@@ -40,10 +45,10 @@ const StyledSection = styled.section`
   }
   ${({ theme: { down, breakpoints } }) => down(breakpoints.sm)} {
     h1 {
-      width: 90%;
+      width: 95%;
       font-size: 40px;
       line-height: 47px;
     }
   }
-`;
-export default StyledSection;
+`
+export default StyledSection

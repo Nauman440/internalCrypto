@@ -117,8 +117,8 @@ const SubscribeSection = () => {
     <StyledSection url={Hero}>
       <div className="overlayone">
         <div className="overlaytwo">
+          <h1>BE THE FIRST TO KNOW WHEN WE LAUNCH</h1>
           <Row justify="center">
-            <h1>BE THE FIRST TO KNOW WHEN WE LAUNCH</h1>
             <Input
               placeholder="Enter Email Address"
               prefix={<img src={Mail} alt="mail" />}

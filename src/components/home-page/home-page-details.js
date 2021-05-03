@@ -1,17 +1,21 @@
-import { Col, Row } from "antd";
-import React from "react";
-import styled from "styled-components";
-import NFT from "../../images/nft.png";
+import { Col, Row } from "antd"
+import React from "react"
+import styled from "styled-components"
+import NFT from "../../images/nft.png"
 
 const StyledSection = styled.section`
   padding: 7rem 7rem 7rem 7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #0c0726;
+  height: 100vh;
+  overflow: hidden;
   h1 {
     font-weight: 900;
     font-size: 55px;
-    line-height: 50px;
     color: #ffffff;
-    overflow: hidden;
   }
   p {
     font-size: 18px;
@@ -32,10 +36,10 @@ const StyledSection = styled.section`
     );
   }
   ${({ theme: { down, breakpoints } }) => down(breakpoints.lg)} {
-    padding: 3rem 3rem 3rem 3rem;
+    padding: 7rem 2rem 7rem 2rem;
   }
   ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
-    padding: 3rem 2rem 3rem 2rem;
+    padding: 7rem 2rem 7rem 2rem;
 
     h1 {
       font-weight: 900;
@@ -51,12 +55,12 @@ const StyledSection = styled.section`
       line-height: 40px;
     }
   }
-`;
+`
 
 const DetailsSection = () => {
   return (
     <StyledSection>
-      <Row gutter={32} align="middle">
+      <Row gutter={[32, 32]} align="middle">
         <Col md={14}>
           <h1>Cross platform playable NFT’s</h1>
           <p>
@@ -73,7 +77,7 @@ const DetailsSection = () => {
         </Col>
       </Row>
     </StyledSection>
-  );
-};
+  )
+}
 
-export default DetailsSection;
+export default DetailsSection
