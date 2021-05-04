@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   height: 100vh;
 
   .btn-subscribe {
+    margin-bottom: 5rem;
     width: 221px;
     height: 70px;
     background: #940e88;

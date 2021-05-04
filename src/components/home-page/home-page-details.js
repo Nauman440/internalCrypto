@@ -60,7 +60,7 @@ const StyledSection = styled.section`
 const DetailsSection = () => {
   return (
     <StyledSection>
-      <Row gutter={[32, 32]} align="middle">
+      <Row gutter={[48, 32]} align="middle">
         <Col md={14}>
           <h1>Cross platform playable NFT’s</h1>
           <p>

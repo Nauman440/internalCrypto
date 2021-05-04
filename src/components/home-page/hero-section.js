@@ -1,6 +1,6 @@
 import React from "react"
 import StyledSection from "./hero-section-styles"
-import { Link } from "gatsby"
+import scrollTo from "gatsby-plugin-smoothscroll"
 
 const HeroSection = () => {
   return (
@@ -9,9 +9,12 @@ const HeroSection = () => {
         {/* <div className="hero-text"> */}
         <h1>THE FIRST MULTIPLAYER ONLINE NFT BATTLEGROUND</h1>
         <br />
-        <Link to="#">
-          <button className="btn-subscribe">SUBSCRIBE</button>
-        </Link>
+        <button
+          onClick={() => scrollTo("#subscribe")}
+          className="btn-subscribe"
+        >
+          SUBSCRIBE
+        </button>
         {/* </div> */}
       </StyledSection>
     </>

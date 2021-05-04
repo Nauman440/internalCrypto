@@ -11,6 +11,7 @@ const StyledSection = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   overflow: hidden;
+  height: 50vh;
 
   .overlayone {
     width: 100%;
@@ -35,6 +36,10 @@ const StyledSection = styled.div`
       rgba(12, 7, 38, 0.24) 71.02%,
       #0c0726 94.08%
     );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .input-button {
@@ -48,7 +53,6 @@ const StyledSection = styled.div`
     color: #ffffff;
   }
   .ant-input-affix-wrapper {
-    margin-bottom: 7rem;
     background: #ffffff;
     box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
@@ -61,7 +65,6 @@ const StyledSection = styled.div`
   }
 
   h1 {
-    margin-top: 7rem;
     font-size: 45px;
     line-height: 65px;
     text-align: center;
@@ -70,6 +73,8 @@ const StyledSection = styled.div`
   }
 
   ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
+    height: 60vh;
+
     .overlayone {
       background: linear-gradient(
         181.04deg,
@@ -120,6 +125,7 @@ const SubscribeSection = () => {
           <h1>BE THE FIRST TO KNOW WHEN WE LAUNCH</h1>
           <Row justify="center">
             <Input
+              id="subscribe"
               placeholder="Enter Email Address"
               prefix={<img src={Mail} alt="mail" />}
               suffix={<button className="input-button">SUBSCRIBE</button>}
