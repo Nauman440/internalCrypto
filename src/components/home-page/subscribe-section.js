@@ -149,7 +149,8 @@ const SubscribeSection = () => {
         <div className="overlaytwo">
           <h1>BE THE FIRST TO KNOW WHEN WE LAUNCH</h1>
           <Row justify="center">
-            <form action="https://formspree.io/f/xrgrezgy" method="post">
+            <form action="https://formspree.io/f/myylklke" method="POST">
+              {/* <form action="https://formspree.io/f/xrgrezgy" method="post"> */}
               <Row justify="center" align="middle" className="form-row">
                 <Col>
                   <img src={Mail} alt="mail" />
