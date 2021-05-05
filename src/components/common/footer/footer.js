@@ -1,10 +1,9 @@
-import React from "react";
-import { Row, Col, Space } from "antd";
-import styled from "styled-components";
-import Fb from "../../../images/fb.png";
-import Twitter from "../../../images/twitter.png";
-import LinkedIn from "../../../images/linkedin.png";
-import Mail from "../../../images/mail.png";
+import React from "react"
+import { Row, Col, Space } from "antd"
+import styled from "styled-components"
+import Medium from "../../../images/medium.png"
+import Twitter from "../../../images/twitter.png"
+import Telegram from "../../../images/telegram.png"
 
 const StyledSection = styled.div`
   background: linear-gradient(180deg, #0c0726 0%, #110b34 100%);
@@ -37,13 +36,24 @@ const StyledSection = styled.div`
     height: 1px;
     background-color: ${({ theme }) => theme.colors.lightColor};
   }
+  img {
+    cursor: pointer;
+  }
 
   ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-`;
+`
 const Footer = () => {
+  const twitterLink = "https://twitter.com/battlesofcrypto"
+  const mediumLink = "https://medium.com/@battlesofcrypto"
+  const telegramLink = "https://t.me/battlesofcrypto"
+
+  const gotoSocialPage = url => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer")
+    if (newWindow) newWindow.opener = null
+  }
   return (
     <StyledSection>
       <Row>
@@ -54,10 +64,21 @@ const Footer = () => {
           <p>Cookie Preferences</p>
           <Row>
             <Space size={20}>
-              <img src={Fb} alt="fb" />
-              <img src={Twitter} alt="fb" />
-              <img src={LinkedIn} alt="fb" />
-              <img src={Mail} alt="fb" />
+              <img
+                src={Twitter}
+                alt="twitter"
+                onClick={() => gotoSocialPage(twitterLink)}
+              />
+              <img
+                src={Medium}
+                alt="medium"
+                onClick={() => gotoSocialPage(mediumLink)}
+              />
+              <img
+                src={Telegram}
+                alt="telegram"
+                onClick={() => gotoSocialPage(telegramLink)}
+              />
             </Space>
           </Row>
         </Col>
@@ -69,7 +90,7 @@ const Footer = () => {
         </p>
       </Row>
     </StyledSection>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

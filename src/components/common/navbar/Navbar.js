@@ -4,6 +4,7 @@ import { Drawer, Menu, Row, Col, Space } from "antd"
 import { Link } from "gatsby"
 import Logo from "../../../images/logo.png"
 import DrawerIcon from "../../../images/drawer.png"
+import Pdf from "../../../images/crypto.pdf"
 
 const Navbar = () => {
   const [visible, setVisible] = useState(false)
@@ -27,7 +28,7 @@ const Navbar = () => {
     },
     {
       id: 3,
-      value: "BLOG",
+      value: "LITE PAPER",
     },
     {
       id: 4,
@@ -38,6 +39,10 @@ const Navbar = () => {
       value: "NFT",
     },
   ]
+
+  const viewPdf = () => {
+    window.open(Pdf)
+  }
 
   return (
     <NavbarStyles>
@@ -53,9 +58,12 @@ const Navbar = () => {
               <Space size={50}>
                 {navLinks.map(item => (
                   <React.Fragment key={item.id}>
-                    <Link to={item.value}>
+                    {/* <Link to={item.value}> */}
+                    {item.value === "LITE PAPER" ? (
+                      <p onClick={viewPdf}>{item.value}</p>
+                    ) : (
                       <p>{item.value}</p>
-                    </Link>
+                    )}
                   </React.Fragment>
                 ))}
               </Space>
@@ -103,9 +111,9 @@ const Navbar = () => {
         >
           {navLinks.map(item => (
             <Menu.Item key={item.id}>
-              <Link to={item.value}>
-                <a>{item.value}</a>
-              </Link>
+              {/* <Link to={item.value}> */}
+              <a>{item.value}</a>
+              {/* </Link> */}
             </Menu.Item>
           ))}
         </Menu>

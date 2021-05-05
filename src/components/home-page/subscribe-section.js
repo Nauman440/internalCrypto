@@ -1,4 +1,4 @@
-import { Row, Input } from "antd"
+import { Row, Col } from "antd"
 import React from "react"
 import styled from "styled-components"
 import Hero from "../../images/hero2.png"
@@ -51,17 +51,16 @@ const StyledSection = styled.div`
     font-weight: 500;
     font-size: 18px;
     color: #ffffff;
+    cursor: pointer;
   }
-  .ant-input-affix-wrapper {
-    background: #ffffff;
-    box-shadow: 0px 8px 36px rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
+
+  .form-row {
+    background: #fff;
+    height: 75px;
+    padding-left: 8px;
     padding-right: 4px;
-    width: 600px;
-  }
-  .ant-input {
-    font-size: 22px;
-    color: #676767;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
   h1 {
@@ -70,6 +69,18 @@ const StyledSection = styled.div`
     text-align: center;
     color: #ffffff;
     overflow: hidden;
+  }
+
+  input {
+    width: 100%;
+    padding: 25px 60px;
+    border: none;
+    text-align: start;
+    font-size: 18px;
+
+    :focus {
+      outline: none;
+    }
   }
 
   ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
@@ -108,28 +119,82 @@ const StyledSection = styled.div`
       font-size: 28px;
       line-height: 33px;
     }
-    .ant-input-affix-wrapper {
-      width: 90%;
-      height: 60px;
+    input {
+      width: 100%;
+      padding: 25px 30px;
     }
-    .ant-input {
-      font-size: 16px;
+  }
+  ${({ theme: { down, breakpoints } }) => down(breakpoints.xs)} {
+    input {
+      padding: 10px 1px;
+    }
+    .form-row {
+      background: #fff;
+      height: 50px;
+      padding-left: 6px;
+      padding-right: 4px;
+      border-radius: 4px;
+    }
+
+    .input-button {
+      width: 100px;
+      height: 40px;
     }
   }
 `
 const SubscribeSection = () => {
   return (
-    <StyledSection url={Hero}>
+    <StyledSection url={Hero} id="subscribe">
       <div className="overlayone">
         <div className="overlaytwo">
           <h1>BE THE FIRST TO KNOW WHEN WE LAUNCH</h1>
           <Row justify="center">
-            <Input
-              id="subscribe"
-              placeholder="Enter Email Address"
-              prefix={<img src={Mail} alt="mail" />}
-              suffix={<button className="input-button">SUBSCRIBE</button>}
-            />
+            <form action="https://formspree.io/f/xrgrezgy" method="post">
+              <Row justify="center" align="middle" className="form-row">
+                <Col>
+                  <img src={Mail} alt="mail" />
+                </Col>
+                <Col>
+                  <input
+                    required
+                    type="text"
+                    name="Email"
+                    id="email"
+                    type="email"
+                    placeholder="Enter Email Address"
+                  />
+                </Col>
+                <Col>
+                  <button className="input-button" type="submit">
+                    SUBSCRIBE
+                  </button>
+                </Col>
+              </Row>
+            </form>
+            {/* <Form
+              name="basic"
+              initialValues={{ remember: true }}
+              onFinish={onFinish}
+              onFinishFailed={onFinishFailed}
+              method="POST"
+              action="https://formspree.io/f/xrgrezgy"
+            >
+              <Form.Item
+                name="Email"
+                rules={[
+                  { required: true, message: "Please input your email!" },
+                ]}
+              >
+                <Input
+                  name="Email"
+                  id="email"
+                  type="email"
+                  placeholder="Enter Email Address"
+                  prefix={<img src={Mail} alt="mail" />}
+                  suffix={<button className="input-button">SUBSCRIBE</button>}
+                />
+              </Form.Item>
+            </Form> */}
           </Row>
         </div>
       </div>

@@ -5,7 +5,7 @@ const StyledSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100%;
 
   .btn-subscribe {
     margin-bottom: 5rem;

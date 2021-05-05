@@ -5,22 +5,21 @@ import NFT from "../../images/nft.png"
 
 const StyledSection = styled.section`
   padding: 7rem 7rem 7rem 7rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: #0c0726;
-  height: 100vh;
+  height: 80%;
   overflow: hidden;
   h1 {
     font-weight: 900;
-    font-size: 55px;
+    font-size: 50px;
     color: #ffffff;
   }
   p {
     font-size: 18px;
     line-height: 32px;
     color: #c4c4c4;
+    overflow: hidden;
+  }
+  .image-background {
     overflow: hidden;
   }
   img {
@@ -39,6 +38,7 @@ const StyledSection = styled.section`
     padding: 7rem 2rem 7rem 2rem;
   }
   ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
+    height: 100%;
     padding: 7rem 2rem 7rem 2rem;
 
     h1 {
@@ -71,9 +71,7 @@ const DetailsSection = () => {
           </p>
         </Col>
         <Col md={10}>
-          <div className="image-background">
-            <img alt="nft" src={NFT} />
-          </div>
+          <img alt="nft" src={NFT} />
         </Col>
       </Row>
     </StyledSection>
