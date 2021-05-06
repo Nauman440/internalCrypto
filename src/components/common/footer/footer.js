@@ -1,5 +1,5 @@
 import React from "react"
-import { Row, Col, Space } from "antd"
+import { Row, Space } from "antd"
 import styled from "styled-components"
 import Medium from "../../../images/medium.png"
 import Twitter from "../../../images/twitter.png"
@@ -52,6 +52,7 @@ const Footer = () => {
           <img
             src={Medium}
             alt="medium"
+            width="30"
             onClick={() => gotoSocialPage(mediumLink)}
           />
           <img

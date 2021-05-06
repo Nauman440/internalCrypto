@@ -139,7 +139,7 @@ const SubscribeSection = () => {
             <form action="https://formspree.io/f/myylklke" method="POST">
               <Row justify="center" align="middle" className="form-row">
                 <Col>
-                  <img src={Mail} alt="mail" />
+                  <img src={Mail} alt="mail" style={{ marginLeft: "10px" }} />
                 </Col>
                 <Col>
                   <input
