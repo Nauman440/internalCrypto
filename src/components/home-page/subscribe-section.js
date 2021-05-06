@@ -56,7 +56,7 @@ const StyledSection = styled.div`
 
   .form-row {
     background: #fff;
-    height: 75px;
+    height: 100%;
     padding-left: 8px;
     padding-right: 4px;
     border-radius: 8px;
@@ -106,9 +106,7 @@ const StyledSection = styled.div`
         #0c0726 94.08%
       );
     }
-    .ant-input-affix-wrapper {
-      width: 80%;
-    }
+
     .input-button {
       width: 120px;
       font-size: 16px;
@@ -119,21 +117,10 @@ const StyledSection = styled.div`
       font-size: 28px;
       line-height: 33px;
     }
-    input {
-      width: 100%;
-      padding: 25px 30px;
-    }
   }
   ${({ theme: { down, breakpoints } }) => down(breakpoints.xs)} {
     input {
       padding: 10px 1px;
-    }
-    .form-row {
-      background: #fff;
-      height: 50px;
-      padding-left: 6px;
-      padding-right: 4px;
-      border-radius: 4px;
     }
 
     .input-button {

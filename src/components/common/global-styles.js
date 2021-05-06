@@ -45,10 +45,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     overflow-x: hidden;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
       font-family: 'Montserrat', sans-serif;
-      scroll-behavior: smooth;
-   }
+  }
 
 `
 export default function BaseLayout({ children }) {
