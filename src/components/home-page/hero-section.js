@@ -1,10 +1,8 @@
 import React from "react"
 import StyledSection from "./hero-section-styles"
-import scrollTo from "gatsby-plugin-smoothscroll"
 
 const HeroSection = () => {
   const handleBackClick = () => {
-    console.log("hahahs")
     const titleElement = document.getElementById("subscribe")
     titleElement.scrollIntoView({ behavior: "smooth" })
   }
