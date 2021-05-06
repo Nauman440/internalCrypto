@@ -12,6 +12,7 @@ const NavbarStyles = styled.nav`
     color: white;
     margin-top: 28px;
     cursor: pointer;
+    text-transform: uppercase;
   }
 
   .mobile-menu {
