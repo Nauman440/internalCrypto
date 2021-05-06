@@ -150,7 +150,6 @@ const SubscribeSection = () => {
           <h1>BE THE FIRST TO KNOW WHEN WE LAUNCH</h1>
           <Row justify="center">
             <form action="https://formspree.io/f/myylklke" method="POST">
-              {/* <form action="https://formspree.io/f/xrgrezgy" method="post"> */}
               <Row justify="center" align="middle" className="form-row">
                 <Col>
                   <img src={Mail} alt="mail" />
@@ -172,30 +171,6 @@ const SubscribeSection = () => {
                 </Col>
               </Row>
             </form>
-            {/* <Form
-              name="basic"
-              initialValues={{ remember: true }}
-              onFinish={onFinish}
-              onFinishFailed={onFinishFailed}
-              method="POST"
-              action="https://formspree.io/f/xrgrezgy"
-            >
-              <Form.Item
-                name="Email"
-                rules={[
-                  { required: true, message: "Please input your email!" },
-                ]}
-              >
-                <Input
-                  name="Email"
-                  id="email"
-                  type="email"
-                  placeholder="Enter Email Address"
-                  prefix={<img src={Mail} alt="mail" />}
-                  suffix={<button className="input-button">SUBSCRIBE</button>}
-                />
-              </Form.Item>
-            </Form> */}
           </Row>
         </div>
       </div>

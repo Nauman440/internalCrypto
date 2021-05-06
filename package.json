@@ -10,6 +10,7 @@
     "axios-cache-adapter": "^2.7.3",
     "babel-plugin-styled-components": "^1.12.0",
     "gatsby": "^3.2.1",
+    "gatsby-plugin-anchor-links": "^1.2.1",
     "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-gatsby-cloud": "^2.2.0",
     "gatsby-plugin-image": "^1.2.0",

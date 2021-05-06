@@ -6,7 +6,6 @@ const HeroSection = () => {
   return (
     <>
       <StyledSection>
-        {/* <div className="hero-text"> */}
         <h1>THE FIRST MULTIPLAYER ONLINE NFT BATTLEGROUND</h1>
         <br />
         <button
@@ -15,7 +14,6 @@ const HeroSection = () => {
         >
           SUBSCRIBE
         </button>
-        {/* </div> */}
       </StyledSection>
     </>
   )

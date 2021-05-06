@@ -9,20 +9,6 @@ const StyledSection = styled.div`
   background: linear-gradient(180deg, #0c0726 0%, #110b34 100%);
   padding: 7rem 7rem 0.2rem 10rem;
 
-  h1 {
-    font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    color: #ffffff;
-    line-height: 75px;
-  }
-
-  p {
-    font-size: 18px;
-    line-height: 26px;
-    color: #969696;
-    cursor: pointer;
-  }
   .bottom-text {
     margin-top: 1rem;
     font-size: 18px;
@@ -31,7 +17,7 @@ const StyledSection = styled.div`
     color: #ffffff;
   }
   .line-bar {
-    margin-top: 5rem;
+    margin-top: 1rem;
     width: 100%;
     height: 1px;
     background-color: ${({ theme }) => theme.colors.lightColor};
@@ -56,34 +42,25 @@ const Footer = () => {
   }
   return (
     <StyledSection>
-      <Row>
-        <Col xs={24}>
-          <h1>Pages</h1>
-          <p>Legal</p>
-          <p>Privacy Notice</p>
-          <p>Cookie Preferences</p>
-          <Row>
-            <Space size={20}>
-              <img
-                src={Twitter}
-                alt="twitter"
-                onClick={() => gotoSocialPage(twitterLink)}
-              />
-              <img
-                src={Medium}
-                alt="medium"
-                onClick={() => gotoSocialPage(mediumLink)}
-              />
-              <img
-                src={Telegram}
-                alt="telegram"
-                onClick={() => gotoSocialPage(telegramLink)}
-              />
-            </Space>
-          </Row>
-        </Col>
-      </Row>
       <Row justify="center">
+        <Space size={20}>
+          <img
+            src={Twitter}
+            alt="twitter"
+            onClick={() => gotoSocialPage(twitterLink)}
+          />
+          <img
+            src={Medium}
+            alt="medium"
+            onClick={() => gotoSocialPage(mediumLink)}
+          />
+          <img
+            src={Telegram}
+            alt="telegram"
+            onClick={() => gotoSocialPage(telegramLink)}
+          />
+        </Space>
+
         <div className="line-bar" />
         <p className="bottom-text">
           Copyright 2021. All Rights Reserved by Battles of Crypto

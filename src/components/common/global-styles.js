@@ -1,6 +1,6 @@
-import React from "react";
-import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { Helmet } from "react-helmet";
+import React from "react"
+import { createGlobalStyle, ThemeProvider } from "styled-components"
+import { Helmet } from "react-helmet"
 
 const theme = {
   colors: {
@@ -35,7 +35,7 @@ const theme = {
     `@media (max-${vertical ? "height" : "width"}: ${breakpointMax}) and (min-${
       vertical ? "height" : "width"
     }: calc(${breakpointMin} + 0.02px))`,
-};
+}
 
 const GlobalStyle = createGlobalStyle`
 
@@ -47,9 +47,10 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
       font-family: 'Montserrat', sans-serif;
+      scroll-behavior: smooth;
    }
 
-`;
+`
 export default function BaseLayout({ children }) {
   return (
     <ThemeProvider theme={theme}>
@@ -63,5 +64,5 @@ export default function BaseLayout({ children }) {
       <GlobalStyle />
       {children}
     </ThemeProvider>
-  );
+  )
 }
