@@ -55,7 +55,7 @@ const NavbarStyles = styled.nav`
     color: #132b50;
   }
 
-  ${({ theme: { down, breakpoints } }) => down(breakpoints.md)} {
+  ${({ theme: { down, breakpoints } }) => down("900px")} {
     .desktop-menu {
       display: none;
     }

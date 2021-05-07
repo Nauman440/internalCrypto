@@ -21,22 +21,27 @@ const Navbar = () => {
     {
       id: 1,
       value: "HOME",
+      slug: "/",
     },
     {
       id: 2,
       value: "GAME",
+      slug: "/game",
     },
     {
       id: 3,
       value: "LITE PAPER",
+      slug: "/litepaper",
     },
     {
       id: 4,
       value: "TEAM",
+      slug: "/team",
     },
     {
       id: 5,
       value: "NFT",
+      slug: "/nft",
     },
   ]
 
@@ -58,11 +63,12 @@ const Navbar = () => {
               <Space size={50}>
                 {navLinks.map(item => (
                   <React.Fragment key={item.id}>
-                    {/* <Link to={item.value}> */}
                     {item.value === "LITE PAPER" ? (
                       <p onClick={viewPdf}>{item.value}</p>
                     ) : (
-                      <p>{item.value}</p>
+                      <Link to={item.slug}>
+                        <p>{item.value}</p>
+                      </Link>
                     )}
                   </React.Fragment>
                 ))}
