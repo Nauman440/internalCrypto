@@ -15,6 +15,8 @@ const StyledDiv = styled.div`
 
   .header-image {
     width: 700px;
+    border-radius: 50%;
+    background-color: red;
   }
 
   h1 {
@@ -43,16 +45,16 @@ const TeamDetails = () => {
     <StyledDiv>
       <div className="header-image">
         <img src={HeroImg} alt="hero" className="hero-img" />
-        <h1>ZART</h1>
-        <Row justify="center" align="middle">
-          <img
-            src={LinkedIn}
-            alt="linkedin"
-            onClick={() => gotoSocialPage(link)}
-            className="social-icon"
-          />
-        </Row>
       </div>
+      <h1>ZART</h1>
+      <Row justify="center" align="middle">
+        <img
+          src={LinkedIn}
+          alt="linkedin"
+          onClick={() => gotoSocialPage(link)}
+          className="social-icon"
+        />
+      </Row>
     </StyledDiv>
   )
 }

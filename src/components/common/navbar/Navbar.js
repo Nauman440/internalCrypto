@@ -117,9 +117,13 @@ const Navbar = () => {
         >
           {navLinks.map(item => (
             <Menu.Item key={item.id}>
-              {/* <Link to={item.value}> */}
-              <a>{item.value}</a>
-              {/* </Link> */}
+              {item.value === "LITE PAPER" ? (
+                <p onClick={viewPdf}>{item.value}</p>
+              ) : (
+                <Link to={item.slug}>
+                  <p>{item.value}</p>
+                </Link>
+              )}
             </Menu.Item>
           ))}
         </Menu>
