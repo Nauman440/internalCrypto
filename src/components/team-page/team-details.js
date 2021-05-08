@@ -15,7 +15,7 @@ const StyledDiv = styled.div`
   padding-bottom: 4rem;
 
   .header-image {
-    width: 400px;
+    width: 300px;
     border-radius: 50%;
     background-color: white;
 
