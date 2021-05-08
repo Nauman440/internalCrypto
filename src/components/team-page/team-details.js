@@ -17,6 +17,11 @@ const StyledDiv = styled.div`
     width: 700px;
     border-radius: 50%;
     background-color: white;
+
+    @media (max-width:568px) {
+      width:100% !important;
+    }
+
   }
 
   h1 {
