@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
   .header-image {
     width: 700px;
     border-radius: 50%;
-    background-color: red;
+    background-color: white;
   }
 
   h1 {
