@@ -1,7 +1,7 @@
 import React from "react"
 import { Col, Row } from "antd"
 import styled from "styled-components"
-import HeroImg from "../../images/team-header.png"
+import HeroImg from "../../images/team-version.png"
 import LinkedIn from "../../images/linkedin.png"
 
 const StyledDiv = styled.div`
