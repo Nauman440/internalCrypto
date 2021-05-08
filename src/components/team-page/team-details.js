@@ -10,16 +10,17 @@ const StyledDiv = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top:3rem;
   overflow: hidden;
   padding-bottom: 4rem;
 
   .header-image {
-    width: 700px;
+    width: 400px;
     border-radius: 50%;
     background-color: white;
 
     @media (max-width:568px) {
-      width:100% !important;
+      width:50% !important;
     }
 
   }
